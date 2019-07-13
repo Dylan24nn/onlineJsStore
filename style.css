@@ -1,5 +1,28 @@
-.items img {
-    width: 200px;
-    height: 200px;
+.highlight {
+    color: darkblue;
+    text-align: center;
 
 }
+
+
+
+.items img {
+    width: 70px;
+    height: 70px;
+    border-radius: 185px;
+}
+
+.price {
+    color: red;
+    font-family: monospace;
+}
+
+.itemName{
+    color: green;
+    font-family: sans-serif;
+}
+
+.button {
+    width: 35px;
+    height: 20px;
+   }
