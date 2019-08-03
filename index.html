@@ -4,88 +4,166 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"/>
     <title>Sporting goods</title>
+    <script src="goodsJson.js"></script>
+    <script src="functions.js"></script>
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-3">logo</div>
-        <div class="col-md-3"><a href="goods.html">we sell smth</a></div>
-        <div class="col-md-3"><a href="contacts.html">address telephone</a></div>
-        <div class="col-md-3"><a href="cart.html">cart shop</a></div>
-        <div class="col-md-3"><a href="delivery.html">delivery</a></div>
+        <div class="col-md-2">logo</div>
+        <div class="col-md-2"><a href="contacts.html">contacts</a></div>
+        <div class="col-md-2"><a class="cartLink" href="cart.html">cart shop</a></div>
+        <div class="col-md-2"><a href="delivery.html">delivery</a></div>
+        <div class="col-md-2">
+            <button id="reset">reset cart</button>
+        </div>
+        <div class="col-md-2"><a class="wishListLink" href="wishlist.html">wishlist</a></div>
+        <div>
+            <button id="resetWishList">reset wishlist</button>
+        </div>
     </div>
     <h1 class="highlight">Online store of sporting goods</h1>
+
     <div class="row items">
         <div class="col-md-3">
             <div><img src="img/item1.jpg" alt=""/></div>
             <div class="itemName">Cross training</div>
             <div class="price">400 USD</div>
-            <div class="toCart"><button>add</button></div>
+            <div class="toCart">
+                <button class="addBtn">add</button>
+            </div>
+            <div class="toWish">
+                <button class="addWbtn">wish</button>
+            </div>
         </div>
         <div class="col-md-3">
             <div><img src="img/item2.jpg" alt=""/></div>
             <div class="itemName">Cross running</div>
             <div class="price">340 USD</div>
-            <div class="toCart"><button>add</button></div>
+            <div class="toCart">
+                <button class="addBtn">add</button>
+            </div>
+            <div class="toWish">
+                <button class="addWbtn">wish</button>
+            </div>
         </div>
         <div class="col-md-3">
             <div><img src="img/item3.jpg" alt=""/></div>
             <div class="itemName">Cross walking</div>
             <div class="price">300 USD</div>
-            <div class="toCart"><button>add</button></div>
+            <div class="toCart">
+                <button class="addBtn">add</button>
+            </div>
+            <div class="toWish">
+                <button class="addWbtn">wish</button>
+            </div>
         </div>
-          <div class="col-md-3">
+        <div class="col-md-3">
             <div><img src="img/item4.jpg" alt=""/></div>
             <div class="itemName">Men's Rain Jacket</div>
             <div class="price">73 USD</div>
-            <div class="toCart"><button>add</button></div>
+            <div class="toCart">
+                <button class="addBtn">add</button>
+            </div>
         </div>
-         <div class="col-md-3">
+        <div class="col-md-3">
             <div><img src="img/item5.jpg" alt=""/></div>
             <div class="itemName">Men's Ski & Snowboard Jacket</div>
             <div class="price">124 USD</div>
-            <div class="toCart"><button>add</button></div>
+            <div class="toCart">
+                <button class="addBtn">add</button>
+            </div>
         </div>
         <div class="col-md-3">
             <div><img src="img/item6.jpg" alt=""/></div>
             <div class="itemName">Men’s Insulated Rain Jacket</div>
             <div class="price">111 USD</div>
-            <div class="toCart"><button>add</button></div>
+            <div class="toCart">
+                <button class="addBtn">add</button>
+            </div>
         </div>
         <div class="col-md-3">
             <div><img src="img/item7.jpg" alt=""/></div>
             <div class="itemName">Men’s Insulated Rain Jacket</div>
             <div class="price">135 USD</div>
-            <div class="toCart"><button>add</button></div>
+            <div class="toCart">
+                <button class="addBtn">add</button>
+            </div>
         </div>
         <div class="col-md-3">
             <div><img src="img/item8.jpg" alt=""/></div>
             <div class="itemName">Men’s Pant</div>
             <div class="price">40 USD</div>
-            <div class="toCart"><button>add</button></div>
+            <div class="toCart">
+                <button class="addBtn">add</button>
+            </div>
         </div>
         <div class="col-md-3">
             <div><img src="img/item8.jpg" alt=""/></div>
-            <div class="itemName">Men’s  Stretch Pant</div>
+            <div class="itemName">Men’s Stretch Pant</div>
             <div class="price">30 USD</div>
-            <div class="toCart"><button>add</button></div>
+            <div class="toCart">
+                <button class="addBtn">add</button>
+            </div>
         </div>
         <div class="col-md-3">
             <div><img src="img/item10.jpg" alt=""/></div>
-            <div class="itemName">Men’s Sandal </div>
+            <div class="itemName">Men’s Sandal</div>
             <div class="price">50 USD</div>
-            <div class="toCart"><button class="button">add</button></div>
+            <div class="toCart">
+                <button class="button">add</button>
+            </div>
+        </div>
+    </div>
+    <div class="row footer">
+        <div class="col-md-3">
+            <ul>
+                <li><a href="#">delivery</a></li>
+                <li><a href="#">payment</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">information</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul>
+                <li><a href="#">delivery</a></li>
+                <li><a href="#">payment</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">information</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul>
+                <li><a href="#">delivery</a></li>
+                <li><a href="#">payment</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">information</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul>
+                <li><a href="#">delivery</a></li>
+                <li><a href="#">payment</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">information</a></li>
+            </ul>
         </div>
 
-</div>
+    </div>
 
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>

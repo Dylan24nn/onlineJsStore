@@ -4,8 +4,6 @@
 
 }
 
-
-
 .items img {
     width: 70px;
     height: 70px;
@@ -25,4 +23,47 @@
 .button {
     width: 35px;
     height: 20px;
-   }
+       }
+
+.addBtn {
+   background-color: paleturquoise;
+}
+
+.addWbtn {
+    background-color: brown;
+}
+
+.greenBg {
+    background-color: darkseagreen;
+}
+.yellowBg {
+    background-color: yellow;
+}
+
+
+.paletBg {
+    background-color: paleturquoise;
+}
+
+.brownBg {
+    background-color: brown;
+}
+
+.cartLink span {
+    color: brown;
+}
+
+.wishListLink span {
+    color: red;
+}
+
+.par1 {
+    background-color: brown;
+}
+.par2 {
+    background-color: aqua;
+}
+
+.footer {
+    margin-top: 40px;
+}
