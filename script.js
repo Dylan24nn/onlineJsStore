@@ -9,8 +9,10 @@ function updateWishListNumber(n) {
     $(".wishListLink").html("wishlist <span>(" + n + ")</span>");
 }
 
-
 $(function () {
+    //создаем куку в которой будут храниться id товаров
+    //если она еще не создана
+    setGoodsCookie();
 //Отображаем по умолчание 0 товаров
     updateCartNumber(goodsNumber);
     updateWishListNumber(wishNumber);
@@ -24,7 +26,10 @@ $(function () {
 //Отображение количества товаров в корзине
         goodsNumber++;
         updateCartNumber(goodsNumber);
-
+        //дописываем Id товара в куки (ДОБАВИТЬ ПРОВЕРКУ НА ДУБЛИКАТЫ ТОВАРОВ)
+        let itemId = $(this).data("itemId");
+        let goodsIdCookie = getCookie("goodsId");
+        setCookie("goodsId", goodsIdCookie + "," + itemId);
     });
 
     $(".addWbtn").click(function () {
@@ -38,7 +43,6 @@ $(function () {
         updateWishListNumber(wishNumber);
 
     });
-
 
     //обработчик кнопки очистки корзины
     $("#reset").click(function () {
@@ -60,31 +64,23 @@ $(function () {
         $(".addWbtn").attr("disabled", false); // меняет состояние кнопки в активное
 
     });
+    //Проходим по всем кнопкам добавить в корзину и с помощью
+    //Jquery метода .data() добавляем соответсвующие Id
+
+    let itemIdCounter = 0;
+    $( "button.addBtn" ).each(function( index ) {
+       $(this).data("itemId", itemIdCounter++)
+    });
 });
+
+
 
 //setCookie("test", "test2", 7);
 //console.log(getCookie("test"));
 //получение стоимости по Id товара
-function getPriceById(id) {
-    return goods.items[id].price;
-}
-let itemId = 2;
-let priceId = getPriceById(itemId);
-//console.log(priceId);
+
+let goodsId = getCookie("goodsId");
+console.log(goodsId);
 
 
-function getNameById(id) {
-    return goods.items[id].name;
-}
-let itemId2 = 2;
-let name = getNameById(itemId2);
-//console.log(name);
 
-setCookie("firstItem", "0", 7);
-setCookie("secondItem", "1", 7);
-setCookie("thirdItem", "2", 7);
-
-
-let sum = parseInt(getPriceById(getCookie("firstItem"))) +
-    parseInt(getPriceById(getCookie("secondItem"))) +
-    parseInt(getPriceById(getCookie("thirdItem")));

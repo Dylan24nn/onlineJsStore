@@ -9,8 +9,8 @@
 let goods = {
 
     "items": [
-        {"id": "0", "name": "Cross training", price: "400"},
-        {"id": "1", "name": "Cross running", price: "340"},
-        {"id": "2", "name": "Cross walking", price: "300"}
+        {"id": "0", "name": "Cross training", "price": "400", "discont": "5"},
+        {"id": "1", "name": "Cross running", "price": "340", "discont": "15"},
+        {"id": "2", "name": "Cross walking", "price": "300", "discont": "20"}
     ]
 }
